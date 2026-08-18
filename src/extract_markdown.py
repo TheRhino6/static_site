@@ -7,7 +7,7 @@ def extract_markdown_images(text):
     result = []
     for i in range (len(alt_text)):
         result.append((alt_text[i], url[i]))
-    return result
+    return url
 
 def extract_markdown_links(text):
     url = re.findall(r"(?<!!)\[([^\[\]]*)\]\(([^\(\)]*)\)", text)
@@ -16,4 +16,4 @@ def extract_markdown_links(text):
     result = []
     for i in range (len(link_text)):
         result.append((link_text[i], url[i]))
-    return result
+    return url
