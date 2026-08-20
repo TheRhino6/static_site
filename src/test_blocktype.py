@@ -3,7 +3,7 @@ from blocktype import *
 
 class TestBlockType(unittest.TestCase):
     def test_header(self):
-        block = "266564 This is the second header"
+        block = "##### This is the second header"
         block_type = block_to_block_type(block)
         expected_type = BlockType.HEADING
         self.assertEqual(block_type, expected_type)
