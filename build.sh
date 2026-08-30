@@ -1,0 +1,1 @@
+python3 src/main.py "/TheRhino6/static_site/"

@@ -6,19 +6,19 @@ def copy_files(base_file_path):
     log = []
 
     # find working directories
-    target_file_path = os.path.join(base_file_path, "public")
+    target_file_path = os.path.join(base_file_path, "docs")
     host_file_path = os.path.join(base_file_path, "static")
 
     # check if public directory exists and delete
     if test_file_path_exists(target_file_path) == True:
         shutil.rmtree(target_file_path)
         if test_file_path_exists(target_file_path) == False:
-            log.append(f"public directory deleted {target_file_path}")
+            log.append(f"docs directory deleted {target_file_path}")
 
     # create public directory
     os.mkdir(target_file_path)
     if test_file_path_exists(target_file_path):
-        log.append(f"public directory created {target_file_path}")
+        log.append(f"docs directory created {target_file_path}")
 
     # test host directory
     if test_file_path_exists(host_file_path):
