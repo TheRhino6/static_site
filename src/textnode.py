@@ -44,7 +44,7 @@ def text_node_to_html_node(text_node: TextNode) -> LeafNode:
     elif text_node.text_type == TextType.IMAGE:
         if not text_node.url:
             raise ValueError("URL must be provided for image text nodes")
-        return LeafNode(tag="img", value=None, props={"src": text_node.url, "alt": text_node.text})
+        return LeafNode(tag="img", value="", props={"src": text_node.url, "alt": text_node.text})
     else:
         raise ValueError(f"Unsupported text type: {text_node.text_type}")
 
