@@ -46,6 +46,3 @@ def copy_assist(file_path, target, log):
                 copy_assist(path, new_target, log)
         else:
             log.append(f"Error: content neither file or directory {path}")
-
-if __name__ == "__main__":
-    copy_files()
